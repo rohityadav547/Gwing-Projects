@@ -1,0 +1,25 @@
+// Initialize EmailJS
+emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS public key
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Basic validation
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    document.getElementById('form-status').innerText = "All fields are required.";
+    return;
+  }
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(() => {
+      document.getElementById('form-status').innerText = "Message sent successfully!";
+      this.reset();
+    }, (error) => {
+      console.error(error);
+      document.getElementById('form-status').innerText = "Failed to send message. Try again.";
+    });
+});

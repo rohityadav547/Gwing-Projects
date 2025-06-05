@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <img src="rohit sharma.avif" class="slide active">
+    <img src="Virat-Kohli...png" class="slide">
+    <img src="WhatsApp Image 2025-05-24 at 5.54.28 AM.jpeg" class="slide">
+  </div>
+  <button class="prev">&#10094; Previous</button>
+  <button class="next">Next &#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
